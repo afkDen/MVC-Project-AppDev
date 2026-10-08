@@ -11,7 +11,7 @@ public class HomeController : Controller
     [HttpGet("team")]
     public IActionResult Team() => View(new TeamMemberViewModel[]
     {
-        new("Mark Daniel L. Liwanag", "DL"),
+        new("Mark Daniel L. Liwanag", "DL", "Daniel"),
         new("Yeshaya I. Evaristo", "YE"),
         new("Mitch N. Montales", "MM")
     });
