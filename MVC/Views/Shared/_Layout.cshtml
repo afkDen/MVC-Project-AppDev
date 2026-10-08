@@ -19,6 +19,8 @@
             <nav aria-label="Main navigation">
                 <a asp-controller="Home" asp-action="Index" aria-current="@(controller == "Home" && action == "Index" ? "page" : null)">Home</a>
                 <a asp-controller="Home" asp-action="Team" aria-current="@(controller == "Home" && action == "Team" ? "page" : null)">Team directory</a>
+                <a asp-controller="Daniel" asp-action="Index" aria-current="@(controller == "Daniel" && action == "Index" ? "page" : null)">Daniel's profile</a>
+                <a asp-controller="Daniel" asp-action="Portfolio" aria-current="@(controller == "Daniel" && action == "Portfolio" ? "page" : null)">Daniel's portfolio</a>
             </nav>
         </div>
     </header>
