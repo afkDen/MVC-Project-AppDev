@@ -1,8 +1,26 @@
-@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Building ASP.NET Core apps with MVC.</p>
-</div>
+@{ ViewData["Title"] = "Home"; }
+<section class="home-intro" aria-labelledby="home-title">
+    <div>
+        <p class="page-label">Application Development</p>
+        <h1 id="home-title">AppDev group portfolio</h1>
+        <p class="lead">Get to know our group and see what we've worked on.</p>
+        <p>We're building a profile and portfolio for each member as part of our AppDev class. The team directory brings everyone's pages together.</p>
+        <a class="button" asp-controller="Home" asp-action="Team">Meet the team</a>
+    </div>
+    <aside class="project-note" aria-labelledby="project-note-title">
+        <h2 id="project-note-title">About the project</h2>
+        <p>This is a small ASP.NET Core MVC application. We're using it to practice page layouts, CSS, and working together with Git.</p>
+        <p class="muted">Each member develops their pages on a separate branch. We'll merge our contributions during class.</p>
+    </aside>
+</section>
+<section class="home-members" aria-labelledby="members-title">
+    <div class="section-heading">
+        <h2 id="members-title">Our group</h2>
+        <a asp-controller="Home" asp-action="Team">View the directory</a>
+    </div>
+    <ul class="member-list">
+        <li><span class="initials" aria-hidden="true">DL</span><span>Mark Daniel L. Liwanag</span></li>
+        <li><span class="initials" aria-hidden="true">YE</span><span>Yeshaya I. Evaristo</span></li>
+        <li><span class="initials" aria-hidden="true">MM</span><span>Mitch N. Montales</span></li>
+    </ul>
+</section>
