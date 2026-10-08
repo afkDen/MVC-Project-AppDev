@@ -1,9 +1,11 @@
 @{
     var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+
     var action = ViewContext.RouteData.Values["action"]?.ToString();
 }
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,19 +13,24 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     @await RenderSectionAsync("Styles", required: false)
 </head>
+
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" asp-controller="Home" asp-action="Index">AppDev <span>Group portfolio</span></a>
             <nav aria-label="Main navigation">
-                <a asp-controller="Home" asp-action="Index" aria-current="@(controller == "Home" && action == "Index" ? "page" : null)">Home</a>
-                <a asp-controller="Home" asp-action="Team" aria-current="@(controller == "Home" && action == "Team" ? "page" : null)">Team directory</a>
+                <a asp-controller="Home" asp-action="Index"
+                    aria-current="@(controller == "Home" && action == "Index" ? "page" : null)">Home</a>
+                <a asp-controller="Home" asp-action="Team"
+                    aria-current="@(controller == "Home" && action == "Team" ? "page" : null)">Team directory</a>
             </nav>
         </div>
     </header>
     <main id="main" class="container" tabindex="-1">@RenderBody()</main>
-    <footer class="container site-footer"><span>AppDev group project</span><a asp-controller="Home" asp-action="Team">Team directory</a></footer>
+    <footer class="container site-footer"><span>AppDev group project</span><a asp-controller="Home"
+            asp-action="Team">Team directory</a></footer>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
