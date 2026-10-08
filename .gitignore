@@ -480,3 +480,18 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# AppDev local validation and personal files
+**/bin/
+**/obj/
+.vs/
+.vscode/
+*.user
+*.suo
+TestResults/
+artifacts/
+.env
+.env.*
+*.pfx
+*.p12
+graphify-out/
