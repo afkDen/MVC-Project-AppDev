@@ -16,6 +16,11 @@ public class HomeController : Controller
         new("Mitch N. Montales", "MM")
     });
 
+    public IActionResult F2()
+    {
+        return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error() => View();
 }
