@@ -1,0 +1,12 @@
+* text=auto
+*.cs text eol=lf
+*.cshtml text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+
+# Third-party libraries (exclude from language stats and collapse in diffs)
+**/wwwroot/lib/** linguist-vendored
+**/wwwroot/lib/** -diff
+*.map linguist-generated
