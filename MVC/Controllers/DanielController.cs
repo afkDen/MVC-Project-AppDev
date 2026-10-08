@@ -15,4 +15,24 @@ public class DanielController : Controller
         new[] { "Web development", "Roblox game development", "Cybersecurity (future career interest)" },
         "https://github.com/afkDen",
         "https://danielshub.tech/"));
+
+    [HttpGet("portfolio")]
+    public IActionResult Portfolio() => View(new DanielPortfolioViewModel(
+        "Mark Daniel L. Liwanag",
+        new PortfolioProjectViewModel[]
+        {
+            new("Aya", "Web app / Hackathon",
+                "An app that helps groups plan where to eat or go. It includes nearby places, itineraries, and AI-assisted decisions.",
+                "Main Backend Developer / Co-Lead Developer",
+                new[] { "Next.js", "TypeScript", "Supabase" },
+                "https://github.com/afkDen/iNet_GitHub", "https://i-net-git-hub.vercel.app"),
+            new("LakadPapel", "Offline-first mobile app",
+                "A mobile app that works offline and maps out the documents needed for a government application. It uses a dependency graph to connect documents you have to the ones you need.",
+                "Main Developer", new[] { "React Native", "Expo", "TypeScript" },
+                "https://github.com/afkDen/lakad_papel"),
+            new("SubSqueeze", "Shared expense & subscription ledger",
+                "An app for households and student groups to track shared expenses, subscriptions, and payments between members.",
+                "Main Developer", new[] { "Next.js", "TypeScript", "Supabase" },
+                "https://github.com/afkDen/subsqueeze", "https://subsqueeze.vercel.app")
+        }));
 }
