@@ -1,0 +1,41 @@
+@model MVC.Models.Portfolio.DanielProfileViewModel
+@{ ViewData["Title"] = "Daniel's profile"; }
+@section Styles {
+    <link rel="stylesheet" href="~/css/daniel.css" asp-append-version="true" />
+}
+<section class="profile-intro" aria-labelledby="profile-title">
+    <div>
+        <p class="page-label">Profile</p>
+        <h1 id="profile-title">@Model.Name</h1>
+        <p class="lead">@Model.Role</p>
+        <p>@Model.Bio</p>
+        <div class="link-row profile-actions">
+            <a class="button" asp-controller="Daniel" asp-action="Portfolio">View my projects</a>
+            <a class="button button-secondary" asp-controller="Home" asp-action="Team">Back to the team</a>
+        </div>
+    </div>
+    <aside class="panel profile-contact" aria-labelledby="contact-title">
+        <span class="initials" aria-hidden="true">DL</span>
+        <h2 id="contact-title">Find me online</h2>
+        <p class="muted">My main portfolio has more details about my work.</p>
+        <div class="link-row">
+            <a href="@Model.GitHubUrl">GitHub / afkDen</a>
+            <a href="@Model.WebsiteUrl">Personal website</a>
+        </div>
+    </aside>
+</section>
+<div class="profile-details">
+    <section class="panel" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <p class="muted">Languages and tools I've used in my projects.</p>
+        <ul class="tags">
+            @foreach (var skill in Model.Skills) { <li>@skill</li> }
+        </ul>
+    </section>
+    <section class="panel" aria-labelledby="interests-title">
+        <h2 id="interests-title">Interests</h2>
+        <ul class="interest-list">
+            @foreach (var interest in Model.Interests) { <li>@interest</li> }
+        </ul>
+    </section>
+</div>
