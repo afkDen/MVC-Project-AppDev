@@ -1,0 +1,25 @@
+@model MVC.Models.Portfolio.DanielPortfolioViewModel
+@{ ViewData["Title"] = "Daniel's portfolio"; }
+@section Styles {
+    <link rel="stylesheet" href="~/css/daniel.css" asp-append-version="true" />
+}
+<header class="page-heading">
+    <p class="page-label">Daniel's portfolio</p>
+    <h1>My projects</h1>
+    <p class="lead">A few projects I've worked on, with links to their code.</p>
+    <a asp-controller="Daniel" asp-action="Index">Back to my profile</a>
+</header>
+@if (Model.Projects.Count == 0)
+{
+    <div class="panel"><p>No projects added yet.</p></div>
+}
+else
+{
+    <div class="project-list card-grid">
+        @foreach (var project in Model.Projects)
+        {
+            <partial name="_ProjectCard" model="project" />
+        }
+    </div>
+}
+<p class="portfolio-note muted">More details on my <a href="https://danielshub.tech/">personal website</a>.</p>

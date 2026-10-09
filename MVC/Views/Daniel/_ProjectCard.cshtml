@@ -1,0 +1,14 @@
+@model MVC.Models.Portfolio.PortfolioProjectViewModel
+<article class="card project">
+    <p class="project-category">@Model.Category</p>
+    <h2>@Model.Title</h2>
+    <p>@Model.Description</p>
+    <p class="muted">My role: @Model.Role</p>
+    <ul class="tags" aria-label="Technologies">
+        @foreach (var technology in Model.Technologies) { <li>@technology</li> }
+    </ul>
+    <div class="link-row project-links">
+        <a href="@Model.RepositoryUrl">Source code</a>
+        @if (Model.LiveUrl is not null) { <a href="@Model.LiveUrl">Live project</a> }
+    </div>
+</article>
