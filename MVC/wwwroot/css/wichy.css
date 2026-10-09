@@ -1,0 +1,100 @@
+.f3-card {
+
+    max-width: 940px;
+    margin-inline: auto;
+    padding: 40px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.f3-heading{
+    display: flex;
+    align-items: center;
+    gap: 20px;   
+}
+
+.f3-avatar {
+    width: 64px;
+    height: 64px;
+    font-size: 20px;
+}
+
+.f3-card h1{
+    max-width: none;
+    margin: 6px 0 12px;
+}
+
+.f3-heading .lead{
+    margin: 0 0 12px;
+    font-size: 21px;
+}
+
+.f3-section {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var (--line);
+}
+
+.f3-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.f3-interests {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.f3-card .tags {
+    margin: 12px 0 0;
+}
+
+.f3-project-list {
+    display: grid;
+    gap: 18px;
+}
+
+.f3-project {
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.f3-project > a {
+    display: inline-block;
+    margin-top: 18px;
+}
+
+.f3-actions {
+    margin-top: 32px;
+}
+
+@media (max-width: 640px) {
+    .f3-card {
+        padding: 24px;
+    }
+
+    .f3-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .f3-details {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .f3-project {
+        padding: 20px;
+    }
+}
+
+.f3-card,
+.f3-card h1,
+.f3-card h2,
+.f3-card h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
