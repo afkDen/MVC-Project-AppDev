@@ -1,0 +1,86 @@
+@{
+    ViewData["Title"] = "Mitch's Portfolio";
+
+    var skills = new[] { "HTML", "CSS", "C#", };
+    var interests = new[] { "Web development", "Software development", "Game development" };
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/wichy.css"
+          asp-append-version="true" />
+}
+
+<article class="f3-card" aria-labelledby="mitch-name">
+    <header class="f3-heading">
+        <span class="initials f3-avatar" aria-hidden="true">MM</span>
+        <div>
+            <p class="page-label">My portfolio</p>
+            <h1 id="mitch-name">Mitch Montales</h1>
+            <p class="lead">Computer Science Student</p>
+        </div>
+    </header>
+
+    <section class="f3-section" aria-labelledby="about-title">
+        <h2 id="about-title">About me</h2>
+        <p>
+            Hi! My name is Mitch Montales. I'm a Computer Science student at the Polytechnic University of the Philippines.
+        </p>
+    </section>
+
+    <div class="f3-details">
+        <section class="f3-section" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+            <ul class="tags">
+                @foreach (var skill in skills)
+                {
+                    <li>@skill</li>
+                }
+            </ul>
+        </section>
+
+        <section class="f3-section" aria-labelledby="interests-title">
+            <h2 id="interests-title">Interests</h2>
+            <ul class="f3-interests">
+                @foreach (var interest in interests)
+                {
+                    <li>@interest</li>
+                }
+            </ul>
+        </section>
+    </div>
+
+    <section class="f3-section" aria-labelledby="projects-title">
+        <h2 id="projects-title">Featured projects &amp; experience</h2>
+
+        <div class="f3-project-list">
+            <article class="f3-project">
+                <p class="page-label">Group project / Web application</p>
+                <h3>AppDev Group Portfolio</h3>
+                <p>
+                    The project was created as part of the requirements for the AppDev course
+                    by Mitch Montales, Mark Daniel L. Liwanag, and Yeshaya I. Evaristo.
+                </p>
+                <p class="muted">
+                    <strong>My role:</strong> Creating my portfolio page. :)
+                </p>
+                <ul class="tags" aria-label="languages used">
+                    <li>HTML</li>
+                    <li>C#</li>
+                    <li>CSS</li>
+                </ul>
+
+                <a href="https://github.com/afkDen/MVC-Project-AppDev">
+                    Source code &rarr;
+                </a>
+            </article>
+        </div>
+        <p class="muted">More projects coming soon.</p>
+    </section>
+
+    <div class="f3-actions">
+        <a class="button button-secondary"
+           asp-controller="Home" asp-action="Team">
+            &larr; Back to Directory
+        </a>
+    </div>
+</article>

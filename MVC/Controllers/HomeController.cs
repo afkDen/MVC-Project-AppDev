@@ -7,6 +7,7 @@ public class HomeController : Controller
 {
     public IActionResult Index() => View();
     public IActionResult Privacy() => View();
+    public IActionResult F3() => View("mitch");
 
     [HttpGet("team")]
     public IActionResult Team() => View(new TeamMemberViewModel[]
